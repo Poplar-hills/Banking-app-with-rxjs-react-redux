@@ -1,0 +1,21 @@
+{
+  "name": "banking-app-with-rxjs-react-redux",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "moment": "^2.19.4",
+    "ramda": "^0.25.0",
+    "react": "15.4.1",
+    "react-bootstrap": "0.30.7",
+    "react-dom": "15.4.1",
+    "rxjs": "5.0.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.2.0"
+  }
+}
