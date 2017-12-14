@@ -1,7 +1,7 @@
 {
   "name": "banking-app-with-rxjs-react-redux",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "start": "parcel index.html"
   },
@@ -19,6 +19,7 @@
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.2.0"
+    "parcel-bundler": "^1.2.0",
+    "stylus": "^0.54.5"
   }
 }
