@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import moment from 'moment'
-import { Table } from 'react-bootstrap'
+import { Panel, Table } from 'react-bootstrap'
 
 export default class RecentActivity extends Component {
   constructor(props) {
@@ -11,9 +11,9 @@ export default class RecentActivity extends Component {
   }
   componentDidMount () {
     this.sub = this.props.appState$
-      .distinctUntilKeyChanged('transactions')
-      .map(_ => _.transactions.slice(_.skip, _.skip + _.limit))
-      .subscribe(transactions => { this.setState({ transactions }) })
+      .distinctUntilKeyChanged('transactions')  // only care about the "transactions" changes in the store
+      .map(_ => _.transactions.slice(_.skip, _.skip + _.limit))  // determine the number of transcations to display
+      .subscribe(transactions => this.setState({ transactions }))
   }
   componentDidUnMount () {
     this.sub.unsubscribe()
@@ -36,12 +36,14 @@ export default class RecentActivity extends Component {
   }
   render() {
     return (
-      <Table hover={ true } bordered={ true }>
-        <tbody>
-          { this.renderHeaders() }
-          { this.renderItems() }
-        </tbody>
-      </Table>
+      <Panel header='Recent Transactions'>
+        <Table hover={ true } bordered={ true }>
+          <tbody>
+            { this.renderHeaders() }
+            { this.renderItems() }
+          </tbody>
+        </Table>
+      </Panel>
     )
   }
 }

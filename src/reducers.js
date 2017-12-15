@@ -23,7 +23,7 @@ const reducer = (state = defaultState, action) => {
   switch (action.type) {
     case types.ADD_TRANSACTION:
       return R.over(transactionsLens, R.prepend(action.transaction), state)
-    default:
+    default:  // don't miss this
       return state
   }
 }

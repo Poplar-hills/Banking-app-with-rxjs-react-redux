@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { Panel } from 'react-bootstrap'
+import { Grid } from 'react-bootstrap'
+import AccountBalance from './AccountBalance'
 import RecentActivity from './RecentActivity'
 
 export default class Banking extends Component {
   render () {
     return (
-      <Panel header='Recent Transactions'>
+      <Grid>
+        <AccountBalance { ...this.props } />
         <RecentActivity { ...this.props } />
-      </Panel>
+      </Grid>
     )
   }
 }
