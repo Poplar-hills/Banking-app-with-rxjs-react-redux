@@ -27,8 +27,8 @@ export default class AccountBalance extends Component {
   render () {
     return (
       <Panel header='Account Balance'>
-        <Balance name='Checking' balance={ this.state.checking } />
-        <Balance name='Savings' balance={ this.state.savings } />
+        <Balance name='Checking Account' balance={ this.state.checking } />
+        <Balance name='Saving Account' balance={ this.state.savings } />
       </Panel>
     )
   }

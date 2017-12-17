@@ -26,7 +26,7 @@ export default class RecentActivity extends Component {
   renderItems () {
     return this.state.transactions.map((t, key) => (
       <tr key={ key }>
-        <td>{ moment(t.timestamp).format('MM / DD / YYYY') }</td>
+        <td>{ moment(t.timestamp).format('YYYY-MM-DD hh:mm') }</td>
         <td>{ t.amount < 0 ? 'withdraw' : 'deposit' }</td>
         <td>{ t.name }</td>
         <td>{ `$${t.amount.toFixed(2)}` }</td>
