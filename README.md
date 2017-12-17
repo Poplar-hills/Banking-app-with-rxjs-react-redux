@@ -1,3 +1,5 @@
+This project is a enhancement for the application in the last chapter of [`RxJS In Action`](https://www.manning.com/books/rxjs-in-action).
+
 ### The goal of this application
 
 Our goal is to build a basic banking application that can handle various aspects of a user’s finances. In this case, we’ll focus on the actions that occur when a user attempts to withdraw money from their account and all the actions that happen behind the scenes, like making sure every transaction is captured and stored.
